@@ -1,7 +1,8 @@
 export const personnages = [
     {
-        race: "Nain",
+        breed: "Nain",
         id: 0,
+        name: "",
         agility: 1,
         speed: 1,
         strength: 1,
@@ -15,8 +16,9 @@ export const personnages = [
         stamina: 1
     },
     {
-        race: "Dragon",
+        breed: "Dragon",
         id: 1,
+        name: "",
         agility: 1,
         speed: 1,
         strength: 1,
@@ -30,8 +32,9 @@ export const personnages = [
         stamina: 1
     },
     {
-        race: "Orc",
+        breed: "Orc",
         id: 2,
+        name: "",
         agility: 1,
         speed: 1,
         strength: 1,
@@ -45,8 +48,9 @@ export const personnages = [
         stamina: 1
     },
     {
-        race: "Elfe",
+        breed: "Elfe",
         id: 3,
+        name: "",
         agility: 1,
         speed: 1,
         strength: 1,
@@ -60,8 +64,9 @@ export const personnages = [
         stamina: 1
     },
     {
-        race: "Sorcier",
+        breed: "Sorcier",
         id: 4,
+        name: "",
         agility: 1,
         speed: 1,
         strength: 1,
@@ -75,8 +80,9 @@ export const personnages = [
         stamina: 1
     },
     {
-        race: "Barbare",
+        breed: "Barbare",
         id: 5,
+        name: "",
         agility: 1,
         speed: 1,
         strength: 1,
@@ -90,8 +96,9 @@ export const personnages = [
         stamina: 1
     },
     {
-        race: "Vampire",
+        breed: "Vampire",
         id: 6,
+        name: "",
         agility: 1,
         speed: 1,
         strength: 1,
@@ -105,8 +112,9 @@ export const personnages = [
         stamina: 1
     },
     {
-        race: "Gobelin",
+        breed: "Gobelin",
         id: 7,
+        name: "",
         agility: 1,
         speed: 1,
         strength: 1,
