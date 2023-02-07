@@ -1,0 +1,22 @@
+p {
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #000;
+    color: #DAA520;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #000;
+    color: #DAA520;
+    font-family: "Raleway", sans-serif;
+    padding: 5px;
+    font-size: 16px;
+    &:hover{
+        transition: .5s;
+        background-color: #660000;
+        color: #fff;
+        font-size: 20px;
+    }
+}

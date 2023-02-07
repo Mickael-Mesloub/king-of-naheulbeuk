@@ -1,9 +1,9 @@
-// import {combineReducers} from "redux";
-// import reducer from 'chemin/reducer'
+import {combineReducers} from "redux";
+import heroSlice from "./slices/user/heroSlice";
 
-// const rootReducer = combineReducers({
-//     nomDuState: reducer
-// })
+const rootReducer = combineReducers({
+    hero: heroSlice
+})
 
 
-// export default rootReducer
+export default rootReducer

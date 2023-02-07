@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import {Provider} from "react-redux";
 import configureAppStore from "./store/store";
-import {BrowserRouter} from "react-router-dom";
 
 
 const store = configureAppStore()
@@ -12,8 +11,6 @@ const store = configureAppStore()
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <Provider store={store}>
-        <BrowserRouter>
-            <App/>
-        </BrowserRouter>
+        <App/>
     </Provider>
 );
