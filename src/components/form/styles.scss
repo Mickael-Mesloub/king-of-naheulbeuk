@@ -1,0 +1,21 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid 	#fff;
+    background-color: 	#D2691E;
+    color: #fff;
+    width: 40%;
+    border-radius: 15px;
+    padding: 20px;
+    
+
+    input, select {
+        font-family: "Raleway", sans-serif;
+        padding: 5px;
+        margin: 5px;
+    }
+    button {
+        padding: 5px;
+    }
+}
+
