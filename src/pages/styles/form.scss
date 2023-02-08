@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway:wght@400;700&display=swap');
+
+
+body {
+    font-family: "Berkshire Swash", cursive;
+    background-color: 	#A0522D;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: 	#DAA520;
+    text-shadow: 0 5px 5px #000;
+    font-size: 40px;
+}
+
+.form {
+    display: flex;
+    border: 1px solid 	#fff;
+    background-color: 	#D2691E;
+    color: #fff;
+    width: 40%;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 15px 15px 15px #000;
+
+    div {
+        display: flex;
+        width: 33%;
+
+        input, select {
+            font-family: "Raleway", sans-serif;
+            padding: 5px;
+            margin: 5px;
+        }
+    
+    }
+    
+
+    .submit {
+        padding: 5px;
+        font-size: 16px;
+        &:hover{
+            transition: .5s;
+            background-color: #660000;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+    
+}
+

@@ -1,122 +1,131 @@
 export const personnages = [
     {
-        breed: "Nain",
         id: 0,
-        agility: 1,
-        speed: 1,
-        strength:  1,
-        magic: 1,
+        breed: 'Nain',
         shield: {
-            force: 1,
-            magic: 1
+            physical: 55,
+            magical: 5,
+            dodge: 10,
         },
-        luck: 1,
-        hp: 1,
-        stamina: 1
+        attack: {
+            speed: 35,
+            strength: 80,
+            magic: 15,
+        },
+        luck: 50, // 0,5 * random 0-10
+        hp: 100
     },
     {
-        breed: "Dragon",
         id: 1,
-        agility: 1,
-        speed: 1,
-        strength: 1,
-        magic: 1,
+        breed: 'Dragon',
         shield: {
-            force: 1,
-            magic: 1
+            physical: 30,
+            magical: 20,
+            dodge: 20,
         },
-        luck: 1,
-        hp: 1,
-        stamina: 1
+        attack: {
+            speed: 60,
+            strength: 50,
+            magic: 10,
+        },
+        luck: 60,
+        hp: 100
     },
     {
-        breed: "Orc",
         id: 2,
-        agility: 1,
-        speed: 1,
-        strength: 1,
-        magic: 1,
+        breed: 'Orc',
         shield: {
-            force: 1,
-            magic: 1
+            physical: 60,
+            magical: 10,
+            dodge: 10,
         },
-        luck: 1,
-        hp: 1,
-        stamina: 1
+        attack: {
+            speed: 50,
+            strength: 90,
+            magic: 0,
+        },
+        luck: 30,
+        hp: 100
     },
     {
-        breed: "Elfe",
         id: 3,
-        agility: 1,
-        speed: 1,
-        strength: 1,
-        magic: 1,
+        breed: 'Elfe',
         shield: {
-            force: 1,
-            magic: 1
+            physical: 5,
+            magical: 40,
+            dodge: 35,
         },
-        luck: 1,
-        hp: 1,
-        stamina: 1
+        attack: {
+            speed: 60,
+            strength: 10,
+            magic: 40,
+        },
+        luck: 60,
+        hp: 100
     },
     {
-        breed: "Sorcier",
         id: 4,
-        agility: 1,
-        speed: 1,
-        strength: 1,
-        magic: 1,
+        breed: 'Sorcier',
         shield: {
-            force: 1,
-            magic: 1
+            physical: 10,
+            magical: 60,
+            dodge: 20,
         },
-        luck: 1,
-        hp: 1,
-        stamina: 1
+        attack: {
+            speed: 30,
+            strength: 0,
+            magic: 100,
+        },
+        luck: 30,
+        hp: 100
     },
     {
-        breed: "Barbare",
         id: 5,
-        agility: 1,
-        speed: 1,
-        strength: 1,
-        magic: 1,
+        breed: 'Barbare',
         shield: {
-            force: 1,
-            magic: 1
+            physical: 40,
+            magical: 10,
+            dodge: 15,
         },
-        luck: 1,
-        hp: 1,
-        stamina: 1
+        attack: {
+            speed: 40,
+            strength: 80,
+            magic: 5,
+        },
+        luck: 60,
+        hp: 100
     },
-    {
-        breed: "Vampire",
+ 
+   {
         id: 6,
-        agility: 1,
-        speed: 1,
-        strength: 1,
-        magic: 1,
+        breed: 'Vampire',
         shield: {
-            force: 1,
-            magic: 1
+            physical: 20,
+            magical: 20,
+            dodge: 30,
         },
-        luck: 1,
-        hp: 1,
-        stamina: 1
+        attack: {
+            speed: 60,
+            strength: 30,
+            magic: 20,
+        },
+        luck: 70,
+        hp: 100
     },
     {
-        breed: "Gobelin",
         id: 7,
-        agility: 1,
-        speed: 1,
-        strength: 1,
-        magic: 1,
+        breed: 'Gobelin',
         shield: {
-            force: 1,
-            magic: 1
+            physical: 20,
+            magical: 20,
+            dodge: 50,
         },
-        luck: 1,
-        hp: 1,
-        stamina: 1
+        attack: {
+            speed: 80,
+            strength: 20,
+            magic: 20,
+        },
+        luck: 40,
+        hp: 100
     }
 ]
