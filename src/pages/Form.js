@@ -27,7 +27,7 @@ export const Form = () => {
         navigate("/start");           
      };
 
-    console.log(pseudo)
+    
     return(
         
         <>
@@ -45,7 +45,6 @@ export const Form = () => {
             </form>
             
         </>
-
     )
 }
 

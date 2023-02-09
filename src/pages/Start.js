@@ -27,7 +27,6 @@ export const Start = () => {
 
     // ********** VARIABLES **********
 
-    
     const breed = state.hero.hero.breed;
     const name = state.hero.hero.name;
     const navigate = useNavigate();
@@ -37,14 +36,12 @@ export const Start = () => {
 
     const handleChange = (event) => {
         setPhysicalAtk(Number(event.target.value)); 
-
-        
     }
 
     const increment = (event) => {
         event.preventDefault();
         
-        if(counter >= 0 && counter < 30){
+        if(counter >= 0){
             counter++
         }
 

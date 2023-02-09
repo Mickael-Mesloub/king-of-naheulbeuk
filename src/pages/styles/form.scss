@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway:wght@400;700&display=swap&family=Shojumaru&display=swap');
 
 
 body {
@@ -21,6 +21,9 @@ h1 {
 
 .form {
     display: flex;
+    flex-direction: column;
+    font-family: 'Shojumaru';
+    font-size: 22px;
     border: 1px solid 	#fff;
     background-color: 	#D2691E;
     color: #fff;
@@ -29,29 +32,27 @@ h1 {
     padding: 20px;
     box-shadow: 15px 15px 15px #000;
 
-    div {
-        display: flex;
-        width: 33%;
-
-        input, select {
-            font-family: "Raleway", sans-serif;
+        input, #hero {
+            text-align: center;
+            font-family: "Shojumaru", sans-serif;
+            font-size: 18px;
             padding: 5px;
             margin: 5px;
+        
         }
     
-    }
-    
-
     .submit {
         padding: 5px;
-        font-size: 16px;
+        font-size: 20px;
+        font-family: 'Shojumaru';
+        font-weight: 700;
+        transition: .5s;
         &:hover{
-            transition: .5s;
+            transform: scale(1.1, 1.5);
             background-color: #660000;
             color: #fff;
             font-size: 20px;
         }
     }
-    
 }
 
