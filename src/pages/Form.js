@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {personnages} from '../components/data/Characters';
 import { addHero } from "../store/slices/user/heroSlice";
+import { addAllHeroes } from "../store/slices/game/gameSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 
@@ -12,29 +13,46 @@ export const Form = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    useEffect(() =>{
-        console.log(state.hero);
-    },[state.hero]) 
-
-    // ********** STATES **********
+    // ********** USESTATES **********
 
     const [pseudo, setPseudo] = useState("");
-    const [hero, setHero] = useState(state.hero);
+    const [selectedHero, setSelectedHero] = useState({});
 
+    // ********** USEEFFECTS **********
+    
+    useEffect(() => {
+        // récupère la data du back-end avec un fetch
+        fetch('http://mickaelmesloub.ide.3wa.io:9658/heros')
+            .then(response => response.json())
+            .then(data => {
+                // modifie le state de gameSlice: ajoute la data (tous les héros du backend) dans le tableau vide du slice
+                dispatch(addAllHeroes(data));
+                setSelectedHero(getRandomHero(data));
+            });
+    }, [])
+
+    const getRandomHero = (heroes) => {
+
+    const randomHero = heroes[Math.floor(Math.random() * heroes.length)];
+    console.log(randomHero)
+    return randomHero;
+    
+    }
+    
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(addHero({...hero, name: pseudo})); // ...hero = action.payload: la data qu'on envoie 
+        dispatch(addHero({...selectedHero, name: pseudo})); // ...hero = action.payload: la data qu'on envoie 
         navigate("/start");           
      };
 
-    
     return(
         
         <>
             <form className="form"onSubmit={handleSubmit}>
                 <label htmlFor="hero">Choisissez un personnage </label>
-                <select defaultValue={hero.id} onChange={(event) => setHero(personnages[event.target.value])} id="hero" name="hero">
-                    {personnages.map((e, i) => { 
+                <select id="hero" name="hero" value={selectedHero.id} onChange={(event) => 
+                        setSelectedHero(state.game.heroes.find((hero) => hero.id === Number(event.target.value)))}>
+                    {state.game.heroes.map((e, i) => { 
                         return <option  key={i} value={e.id}>{e.breed}</option>
                     })}
                 </select>
