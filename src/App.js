@@ -1,10 +1,7 @@
 import {Form} from "./pages/Form.js"
-import './App.scss'
+import './styles/App.scss'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {Start} from "./pages/Start.js" 
-
-// Composant Title : pour titre dynamique en fonction des phases
-// 
 
 const App = () => {
 
@@ -24,12 +21,4 @@ const App = () => {
     )
 };
 
-export default App
-
-/* Push sur GitHub:
-
-git add .
-git commit -m "message qu'on veut"
-git push
-
-*/
+export default App;

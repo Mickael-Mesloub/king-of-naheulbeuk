@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway:wght@400;700&display=swap&family=Shojumaru&display=swap');
-
 @import './_variables.scss';
 @import './_mixins.scss';
 @import './_placeholders.scss';
 
 
+// Gérer breakpoints
+
+
 body {
     font-family: "Berkshire Swash", cursive;
-    background-color: $marron-fond;
+    background-color: $fond-marron;
 }
 
 #root {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
     font-family: 'Shojumaru';
     font-size: 22px;
     border: 1px solid 	#fff;
-    background-color: $orange-fond-form;
+    background-color: $fond-form-orange;
     color: #fff;
     width: 40%;
     border-radius: 15px;
@@ -42,21 +42,11 @@ h1 {
             font-size: 18px;
             padding: 5px;
             margin: 5px;
-        
         }
     
-    .submit {
-        padding: 5px;
-        font-size: 20px;
-        font-family: 'Shojumaru';
-        font-weight: 700;
-        transition: .5s;
-        &:hover{
-            transform: scale(1.1, 1.5);
-            background-color: #660000;
-            color: #fff;
-            font-size: 20px;
-        }
+    .btn {
+        @extend %baston-buttons;
     }
+    
 }
 

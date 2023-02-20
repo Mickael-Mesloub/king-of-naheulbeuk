@@ -11,7 +11,7 @@ export const heroSlice = createSlice({
         addHero: (state, action) => {
             return {
                 ...state,
-                hero: action.payload // action.payload = la data qu'on envoie dans addHero avec le dispatch
+                hero: action.payload
             }
         }
     }

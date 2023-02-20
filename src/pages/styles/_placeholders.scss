@@ -4,3 +4,18 @@
     justify-content: center;
     align-items: center;
 }
+
+%baston-buttons {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Shojumaru';
+    font-weight: 700;
+    transition: .5s;
+        &:hover{
+            transform: scale(1.05, 1.2);
+            background-color: #00A36C	;
+            color: #fff;
+            font-size: 20px;
+        }
+}

@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import {personnages} from '../components/data/Characters';
+// import { personnages } from '../components/data/Characters'; 
 import { addHero } from "../store/slices/user/heroSlice";
 import { addAllHeroes } from "../store/slices/game/gameSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
-
 import './styles/form.scss';
+
+
+// POUR DÉMARRER LE PROJET SUR IDE 3WA: DANS PACKAGE.JSON:  "scripts":   "start": "PORT=9111 react-scripts start"
+
+// !!! Pour pseudo !!! Prévoir regex
 
 export const Form = () => {
 
@@ -25,7 +29,7 @@ export const Form = () => {
         fetch('http://mickaelmesloub.ide.3wa.io:9658/heros')
             .then(response => response.json())
             .then(data => {
-                // modifie le state de gameSlice: ajoute la data (tous les héros du backend) dans le tableau vide du slice
+                // modifie le state de gameSlice: ajoute la data (tous les héros du back-end) dans le tableau vide du slice
                 dispatch(addAllHeroes(data));
                 setSelectedHero(getRandomHero(data));
             });
@@ -38,7 +42,7 @@ export const Form = () => {
     return randomHero;
     
     }
-    
+
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(addHero({...selectedHero, name: pseudo})); // ...hero = action.payload: la data qu'on envoie 
@@ -51,7 +55,7 @@ export const Form = () => {
             <form className="form"onSubmit={handleSubmit}>
                 <label htmlFor="hero">Choisissez un personnage </label>
                 <select id="hero" name="hero" value={selectedHero.id} onChange={(event) => 
-                        setSelectedHero(state.game.heroes.find((hero) => hero.id === Number(event.target.value)))}>
+                    setSelectedHero(state.game.heroes.find((hero) => hero.id === Number(event.target.value)))}>
                     {state.game.heroes.map((e, i) => { 
                         return <option  key={i} value={e.id}>{e.breed}</option>
                     })}
@@ -65,14 +69,3 @@ export const Form = () => {
         </>
     )
 }
-
-// const [stats, setStats] = useState(
-    //     {
-    //         physicalAtk: state.hero.hero.attack.strength,
-    //         magicalAtk: state.hero.hero.attack.magic,
-    //         speed: state.hero.hero.attack.speed,
-    //         physicalDef: state.hero.hero.shield.physical,
-    //         magicalDef: state.hero.hero.shield.magical,
-    //         dodge:state.hero.hero.shield.dodge
-    //     }
-    // )
